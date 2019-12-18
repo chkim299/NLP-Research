@@ -1,0 +1,33 @@
+- NLP approach:
++ Rule-base (Precision -> high, recall -> low)
++ Probability and machine learning (feature generation)
++ Deep learning (no feature generation)
+
+- Text classification:
++ Text representation:
+- Sequence of Character -> low level
+- Sequence of word -> high level 
+ 
++ Tokenization: slipt input sequence -> token 
+- Python lib: NLTK (TreeBankWordTokenizer -> set of rule -> perfect)
+tokenizer = nltk.tokenize.WhitespaceTokenizer()
+tokenizer.tokenize(text)
+
+
+tokenizer = nltk.tokenize.TreebankWordTokenizer()
+tokenizer.tokenize(text)
+
+
+tokenizer = nltk.tokenize.WordPunctTokenizer()
+tokenizer.tokenize(text)
+
+
++ Token normalization:
+* Stemming: remove suffixes -> original word ( usually use heuristics) - nltk.stem.PorterStemmer (irregular verb -> wrong) 
+* Lemmatization: doing things properly (using vocab and morphological analysis) => Return base or dictionar form of a word (lemma) (not full)
+* Further:
+	- capital letter
+	- acronyms
+
++ Feature extraction:
+
